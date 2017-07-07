@@ -1,3 +1,87 @@
 *, *::before, *::after {
     box-sizing:border-box;
 }
+
+/* -------------------------------------------------------------------------------- */
+/* globalne klasy */
+/* -------------------------------------------------------------------------------- */
+.container {
+    width:1060px;
+    margin:0 auto;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* layout */
+/* -------------------------------------------------------------------------------- */
+body {
+    font-family: 'Raleway', sans-serif;
+    color:#222;
+}
+
+/* page header */
+.page-header {
+    height:40px;
+    background: #000;
+}
+.page-header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header .page-logo {
+    margin-top:5px;
+    display: inline-block;
+}
+
+/* page nav */
+.page-nav {
+
+}
+.page-nav ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    text-align: right;
+}
+.page-nav li {
+    display: inline-block;
+    position: relative;
+}
+.page-nav li a {
+    padding:0 10px;
+    line-height: 39px;
+    height:40px;
+    display: inline-block;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size:12px;
+}
+.page-nav .page-nav-submenu {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #000;
+
+    opacity:0; /* plynne pokazywanie podmenu */
+    visibility:hidden;
+    transition: 0.5s opacity;
+}
+.page-nav li:hover .page-nav-submenu {
+    opacity:1;
+    visibility:visible;
+}
+.page-nav .page-nav-submenu li {
+    display: block;
+    text-align: left;
+}
+.page-nav .page-nav-submenu li a {
+    height: 30px;
+    line-height: 30px;
+    text-transform: none;
+    font-weight: normal;
+    padding:0 20px;
+}
