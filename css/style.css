@@ -61,7 +61,7 @@ body {
 }
 .page-nav .page-nav-submenu {
     position: absolute;
-    top: 50px;
+    top: 55px;
     left: 50%;
     transform: translate(-50%, 0);
     background: #000;
@@ -70,6 +70,27 @@ body {
     visibility:hidden;
     transition: 0.5s opacity;
 }
+
+.page-nav .page-nav-submenu:before {
+    content:'';
+    width:0;
+    height:0;
+    border:10px solid transparent; /* rgba(0,0,0,0); */
+    border-bottom-color:#000;
+    position: absolute;
+    left:50%;
+    top:-20px;
+    transform: translate(-50%, 0);
+}
+.page-nav .page-nav-submenu:after {
+    content:'';
+    position: absolute;
+    left:0;
+    top:-17px;
+    width:100%;
+    height:17px;
+}
+
 .page-nav li:hover .page-nav-submenu {
     opacity:1;
     visibility:visible;
